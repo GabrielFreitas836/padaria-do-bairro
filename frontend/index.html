@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pães frescos, bolos e café. Encomende online na Padaria do Bairro">
+    <title>Padaria do Bairro | Pães frescos todos os dias</title>
+
+    <!-- Fontes do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Nossa folha de estilo -->
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Padaria do Bairro</h1>
+        <p>Pães frescos, todos os dias, desde 1998.</p>
+        <nav>
+            <ul>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#carrinho">Carrinho (<span id="contador-carrinho">0</span>)</a></li>
+                <li><a href="#sobre">Sobre nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="produtos">
+            <h2>Nossos produtos</h2>
+            <div class="lista-produtos">
+                <article class="produto" data-id="1" data-preco="0.75">
+                    <img src="images/pao-frances.jpg" alt="Pão francês dourado e crocante" width="300">
+                    <h3>Pão Francês</h3>
+                    <p>Crocante por fora e macio por dentro, saído do forno toda hora.</p>
+                    <p class="preco"><strong>R$ 0,75</strong> a unidade</p>
+                    <button type="button" class="btn btn-adicionar">Adicionar ao carrinho</button>
+                </article>
+
+                <article class="produto" data-id="2" data-preco="8.50">
+                    <img src="images/bolo-cenoura.jpg" alt="Fatia de bolo de cenoura com cobertura de chocolate" width="300">
+                    <h3>Bolo de Cenoura</h3>
+                    <p>Massa fofinha com cobertura de chocolate, receita da casa.</p>
+                    <p class="preco"><strong>R$ 8,50</strong> a fatia</p>
+                    <button type="button" class="btn btn-adicionar">Adicionar ao carrinho</button>
+                </article>
+
+                <article class="produto" data-id="3" data-preco="7.00">
+                    <img src="images/croissant.jpg" alt="Croissant folhado" width="300">
+                    <h3>Croissant</h3>
+                    <p>Folhado, amanteigado e perfeito para acompanhar o café.</p>
+                    <p class="preco"><strong>R$ 7,00</strong> a unidade</p>
+                    <button type="button" class="btn btn-adicionar">Adicionar ao carrinho</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="carrinho">
+            <h2>Seu carrinho</h2>
+
+            <p id="carrinho-vazio">Seu carrinho está vazio. Escolha algo gostoso!</p>
+
+            <ul id="lista-carrinho"></ul>
+
+            <div id="resumo-carrinho" hidden>
+                <p>Subtotal: <span id="resumo-subtotal"></span></p>
+                <p>Desconto: <span id="resumo-desconto"></span></p>
+                <p>Entrega: <span id="resumo-frete"></span></p>
+                <p class="total">Total: <span id="resumo-total"></span></p>
+                <button type="button" class="btn" id="btn-limpar">Esvaziar carrinho</button>
+            </div>
+        </section>
+        <section id="sobre">
+            <h2>Sobre nós</h2>
+            <p>A Padaria do Bairro nasceu de uma receita de família e hoje atende toda a vizinhança. 
+            Usamos <strong>ingredientes selecionados</strong> e assamos tudo no mesmo dia.</p>
+
+            <h3>Horário de funcionamento</h3>
+            <table>
+                <thead>
+                    <tr><th>Dia</th><th>Horário</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Segunda a Sexta</td><td>6h às 20h</td></tr>
+                    <tr><td>Sábado</td><td>6h às 18h</td></tr>
+                    <tr><td>Domingo</td><td>7h às 12h</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contato">
+            <h2>Fale conosco ou faça uma encomenda</h2>
+            <form>
+                <p>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                </p>
+                <p>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="voce@exemplo.com" required>
+                </p>
+                <p>
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                </p>
+                <p>
+                    <label for="assunto">Assunto:</label>
+                    <select id="assunto" name="assunto">
+                        <option value="encomenda">Encomenda de bolo</option>
+                        <option value="duvida">Dúvida</option>
+                        <option value="sugestao">Sugestão</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" cols="40"></textarea>
+                </p>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Padaria do Bairro. Todos os direitos reservados.</p>
+        <p>Rua das Flores, 123 - Centro | Tel.: <a href="tel:+551133334444">(11) 3333-4444</a></p>
+    </footer>
+</body>
+</html>
