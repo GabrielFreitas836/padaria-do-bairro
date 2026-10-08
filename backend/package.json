@@ -1,0 +1,17 @@
+{
+  "name": "padaria-backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [],
+  "author": "Gabriel Freitas & Claude",
+  "license": "ISC",
+  "description": "Servidor da Padaria do Bairro Online",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

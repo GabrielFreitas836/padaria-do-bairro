@@ -11,10 +11,11 @@ de uma apostila de desenvolvimento web gerada pelo Claude.
 
 ## Tecnologias
 
-HTML, CSS, JavaScript
+HTML, CSS, JavaScript, Node.js, Express.js
 
 ## Como executar
 
-1. Abra a pasta do projeto no VS Code.
-2. Clique com o botão direito em `frontend/index.html`
-3. Escolha **Open with Live Server**.
+1. Abra um terminal na pasta `backend`
+2. Instale as dependências com `npm install`
+3. Inicie o servidor com `npm run dev`
+4. Acesse http://localhost:3000
